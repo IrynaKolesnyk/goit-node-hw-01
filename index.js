@@ -25,7 +25,7 @@ async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
       const contacts = await listContacts();
-      console.log(contacts);
+      console.table(contacts);
       break;
 
     case "get":
@@ -40,7 +40,7 @@ async function invokeAction({ action, id, name, email, phone }) {
 
     case "remove":
       const remaindContacts = await removeContact(id);
-      console.log(remaindContacts);
+      console.table(remaindContacts);
       break;
 
     default:
